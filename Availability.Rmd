@@ -1,0 +1,59 @@
+---
+title: "Availability Calculation"
+author: "Bhargav"
+date: "Saunday, July 26, 2015"
+output: html_document
+runtime: shiny
+---
+
+###Availability Calculation
+
+This App is developed in the intent to calculate the Availability Rate of the Equipment,
+
+In a Manufacturing Plant Operator what to find out what is the availability rate of equipment 
+where production is running .
+
+The availability rate is derived from downtime data  all time that is not considered under a plant's control is filtered out so that the OEE production metric will only judge the effectiveness and accountability of the equipment while it is set up and intended to run.
+
+
+## Inputs and Outputs
+
+
+```{r, echo=FALSE}
+shinyUI(pageWithSidebar( 
+  headerPanel("Availability Calculation"), 
+  sidebarPanel(
+    h3 ("Calculation Inputs"),
+    p('Scheduled Production Time'),
+    p('Actual Production Time'),
+    h3 ("Calculation Outputs"),
+    p('Scheduled Production Time'),
+    p('Actual Production Time'), 
+    p('Equipment Available Time'),
+    p('Availability Rate (%)')),
+  
+  mainPanel(
+    h3("Summary"),
+    p("This App should be useful to find the Availablity Rate for the Equipment"),
+    br(),
+    p("For Example let us take an example of Manufacturing Plant"),
+    p("Operator what to find out what is the availability rate of equipment where 
+     production is runing"),
+    p("The availability rate is derived from downtime data.
+      all time that is not considered under a plant's control is filtered out so
+      that the OEE production metric will only judge the effectiveness and
+      accountability of the equipment while it is set up and intended to run."),
+    br(),
+    strong("Scheduled Production Time : Determines what will be produced"),
+    br(),
+    strong("Actual Production Time : NON-PROCESS PRODUCTION TIME to constitute total PRODUCTION TIME"),
+    br(),
+    strong("Equipment Available Time: % measure of degree to which equipment is operable")
+    
+    )))
+```
+
+
+
+
+
